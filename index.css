@@ -2,6 +2,7 @@ body{
     margin: 5vh;
     
 }
+
 /* div1 */
 .main{
     display: grid;
@@ -9,6 +10,7 @@ body{
     height: 100%;
     
 }
+
 /*div2*/
 .info{
     background: rgba(0,0,0,0.5);
@@ -17,6 +19,7 @@ body{
     margin: 3vh;
     margin-top: 15vh;
 }
+
 .best {
     background: rgba(0,0,0,0.5);
     grid-column: 1/ span 4;
@@ -61,3 +64,35 @@ header{
     ul.members{
         color: white;
     }
+
+    /* buttons*/
+nav{
+    display: flex;
+    gap: 0.5vw;
+    margin-left: 40px;
+    margin-right: 40px;
+ 
+}
+.button{
+   flex-grow: 1;
+    background: rgba(255,255,255,0.6);
+    padding: 20px 25px;
+    border-radius: 8px;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+ 
+nav div:hover{
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+}
+   
+.marked{
+    border: 2px solid white;
+    background: rgba(255,255,255,0.6);
+    pointer-events: none;
+    font-weight: bold;
+}
+
