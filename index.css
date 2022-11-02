@@ -152,4 +152,75 @@ nav div:hover{
         margin-left: 5px;
         border-radius: 0px 0px 20px 0px;
     }
+
+    ul.anecdotes{
+        color: #0000a2;
+        list-style: none;
+        grid-row: 3;
+        grid-column: 1/ span 3;
+    
+        display: grid;
+        grid-template-columns: 0.2fr 0.2fr 0.3fr 0.2fr 0.2fr;
+        column-gap: 10px;
+        width: 80vw;
+        
+    
+    }
+    
+    li.mv{
+        grid-column: 1;
+        grid-row: 1/ span 2;
+        background-color: #000000;
+        padding: 30px 10px 30px 10px;
+        border-radius: 20px 0px 20px 20px;
+        height: 25vh;
+    }
+    
+    li.treasure{
+        grid-column: 3;
+        grid-row: 1/span 2;
+        background-color: #000000;
+        border-radius: 20px 20px 20px 0px;
+        padding: 30px 10px 30px 10px; 
+        height: 25vh;
+        
+    
+    }
+    
+    li.atzimg{
+        grid-column: 4;
+        grid-row: 1/ span 2;
+        background-color: #000000;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-radius: 0px 20px 20px 20px;
+        height: 25vh;
+        
+        background-image: url(hongjoong.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+    }
+    
+    li.million{
+        grid-column: 5;
+        grid-row: 1/ span 2;
+        background-color: #000000;
+        border-radius: 20px 20px 0px 20px;
+        padding: 30px 10px 30px 10px;
+        height: 25vh;
+    }
+    
+    li.empty{
+        grid-column: 2;
+        grid-row: 1/span 2;
+        height: 25vh;
+    }
+    
+    
+    .songs{
+        color: #000000;
+    }
+    
     
