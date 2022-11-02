@@ -1,0 +1,26 @@
+body{
+    margin: 5vh;
+    
+}
+/* div1 */
+.main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+    
+}
+/*div2*/
+.info{
+    background: rgba(0,0,0,0.5);
+    grid-column: 1/ span 4;
+    border-radius: 20px;
+    margin: 3vh;
+    margin-top: 15vh;
+}
+.best {
+    background: rgba(0,0,0,0.5);
+    grid-column: 1/ span 4;
+    border-radius: 20px;
+    margin: 4vh;
+    border: 1px solid white;
+}
