@@ -122,3 +122,34 @@ nav div:hover{
     border-radius: 15px 15px 0px 0px;
     width: 316px;
     height: 316px;}
+
+/* small divs*/
+    .song_list{
+        grid-column: 3/4;
+        grid-row: 2; 
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    
+        font-size: 14px;
+        margin: 10px 10px 10px 10px;
+        
+    }
+    
+    .song_list .one{
+        background-color:#0000a2;
+        color: #000000;
+        height: fit-content;
+        margin-right: 5px;
+        border-radius: 0px 0px 0px 20px;
+    
+    }
+    
+    .song_list .two{
+        background:#0000a2;
+        color: #000000;
+        padding-top: 20px;
+        margin-left: 5px;
+        border-radius: 0px 0px 20px 0px;
+    }
+    
