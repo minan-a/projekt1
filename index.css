@@ -282,3 +282,42 @@ img.show_hover{
     height: 316px;
 }
 
+ul.anecdotes2{
+    color: #f76802;
+    list-style: none;
+    grid-row: 3;
+    grid-column: 1/ span 3;
+
+    display: grid;
+    grid-template-columns: 0.2fr 0.2fr 0.3fr 0.2fr 0.2fr;
+    column-gap: 10px;
+    width: 80vw;
+    
+}
+
+li.billboard{
+    background-color: #d1a7a5;
+    border-radius: 20px 20px 20px 0px;
+    padding: 20px 10px 20px 10px;
+}
+
+li.physical{
+    background-color: #d1a7a5;
+    border-radius: 0px 20px 20px 20px;
+    padding: 20px 10px 20px 10px;
+
+}
+
+li.img2{
+    background-color: #d1a7a5;
+    border-radius: 0px 20px 20px 20px ;
+    padding: 20px 10px 20px 10px;
+}
+
+li.ep1{
+    background-color: #d1a7a5;
+    border-radius: 20px 20px 0px 20px;
+    padding: 20px 10px 20px 10px;
+    
+}
+
