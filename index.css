@@ -196,7 +196,7 @@ nav div:hover{
         border-radius: 0px 20px 20px 20px;
         height: 25vh;
         
-        background-image: url(hongjoong.jpg);
+        background-image: url(hongjoong.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -283,7 +283,6 @@ img.show_hover{
 }
 
 ul.anecdotes2{
-    color: #f76802;
     list-style: none;
     grid-row: 3;
     grid-column: 1/ span 3;
@@ -292,17 +291,21 @@ ul.anecdotes2{
     grid-template-columns: 0.2fr 0.2fr 0.3fr 0.2fr 0.2fr;
     column-gap: 10px;
     width: 80vw;
+    margin-left: 15px;
+    margin-right: 15px;
     
 }
 
 li.billboard{
     background-color: #d1a7a5;
+    color: #f76802;
     border-radius: 20px 20px 20px 0px;
     padding: 20px 10px 20px 10px;
 }
 
 li.physical{
     background-color: #d1a7a5;
+    color: #f76802;
     border-radius: 0px 20px 20px 20px;
     padding: 20px 10px 20px 10px;
 
@@ -310,12 +313,19 @@ li.physical{
 
 li.img2{
     background-color: #d1a7a5;
+    color: #f76802;
     border-radius: 0px 20px 20px 20px ;
     padding: 20px 10px 20px 10px;
+
+    background-image: url(atz-ep-small.png);
+    background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 }
 
 li.ep1{
     background-color: #d1a7a5;
+    color: #f76802;
     border-radius: 20px 20px 0px 20px;
     padding: 20px 10px 20px 10px;
     
