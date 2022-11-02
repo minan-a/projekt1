@@ -255,3 +255,30 @@ nav div:hover{
     border-radius: 0px 0px 20px 0px;
 }
 
+.cover{
+    width: 316px;
+    height: 316px;
+    border: 0px;
+    margin: 10px 10px 0px 10px;
+    grid-column: 3;
+    grid-row: 1;
+    
+}
+  
+img.show_hover{
+    position: absolute;
+    opacity: 0;  
+    transition: 1s;
+    overflow: hidden;
+}
+ 
+.cover:hover img.show_hover{
+    opacity: 1;
+    border-radius: 15px 15px 0px 0px;
+}
+.show_not_hover{
+    border-radius: 15px 15px 0px 0px;
+    width: 316px;
+    height: 316px;
+}
+
