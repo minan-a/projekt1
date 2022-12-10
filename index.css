@@ -1,10 +1,13 @@
 body{
     margin: 0;
+    background-image: url(img/ateezbg.jpg_medium);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-.main{
-    margin:0;
-}
+
+
 
 /*main div*/
 .info{
@@ -28,15 +31,16 @@ body{
     border-radius: 20px;
     margin: 5vh 0vh;
     border: 1px solid white;
+    padding: 10px;
 
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
 }
 
 
 .album_data{
     grid-column: 1/ span 4;
-    grid-row: 1;
+    grid-row: 1/ span 2;
 }
 
 /* titles & texts*/
@@ -78,12 +82,12 @@ nav{
 .button{
     flex-grow: 1;
     background: rgba(255,255,255,0.6);
-    padding: 2.5vw 4vw;
+    padding: 2vw 3vw;
     border-radius: 8px;
     text-align: center;
     justify-content: center;
     cursor: pointer;
-    font-size: 2.5vw;
+    font-size: 2vw;
     align-self: flex-start;
 
     /* padding: 20px 25px; */
@@ -107,8 +111,9 @@ nav div:hover{
 
 /* image change -hover*/
 .cover{
-   grid-column: 5/ span 7;
-    
+   grid-column: 5/7;
+   position: relative;
+   
 }
  
  img.show_hover{
@@ -118,6 +123,7 @@ nav div:hover{
     overflow: hidden;
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
  
 .cover:hover img.show_hover{
@@ -127,31 +133,30 @@ nav div:hover{
 .show_not_hover{
     border-radius: 15px 15px 0px 0px;
     width: 100%;
-    height: 100%;}
+    height: 100%;
+    object-fit: cover;
+    
+}
+
 
 /* small divs*/
     .song_list{
-        grid-column: 4/7;
+        grid-column: 5/span 7;
         grid-row: 2;
-        font-size: 13px;
+        font-size: 14px;
         
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-       
-        margin: 10px;
-        row-gap: 15px;
-        column-gap: 10px;
+        column-gap: 18px;
         width: 95%;
-    
-        
-    }
+        margin-bottom: 10px;
+        margin-top: 12px;
+        }
     
     .song_list .one{
         background-color:#0000a2;
         color: #000000;
         border-radius: 0px 0px 0px 20px;
-        
-        
 
     }
     
@@ -160,11 +165,10 @@ nav div:hover{
         color: #000000;
         border-radius: 0px 0px 20px 0px;
         padding-top: 10px;
-       
-         
+        
     }
 
-    h2.song_list{
+    .song_list h2{
         color: #000000;
     }
 
@@ -174,7 +178,7 @@ nav div:hover{
         font-size: 2vh;
         list-style: none;
         grid-row: 3;
-        grid-column: 1/ span 6;
+        grid-column: 1/ span 7;
         grid-row: 3/4;
         gap: 10px;    
         padding: 0px 10px;
@@ -220,10 +224,11 @@ nav div:hover{
     }
     
     li.atzimg{
-        background-image: url(hongjoong.png);
+        background-image: url(img/hongjoong.png);
         background-position: center;
         background-size: cover;
         border-radius: 0px 20px 20px 20px;
+        color: #0000a2;
 
         align-items: end ;
 
@@ -254,16 +259,17 @@ nav div:hover{
 
 
 .song_list2{
-    grid-column: 4/7;
-        grid-row: 2; 
+    grid-column: 5/span 7;
+        grid-row: 2;
+        font-size: 14px;
+        
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 18px;
+        width: 95%;
+        margin-bottom: 10px;
+        margin-top: 12px;
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-   font-size: 13px;
-    margin: 10px;
-    row-gap: 15px;
-    column-gap: 10px;
-    width: 95%;
 }
 
 .song_list2 .one{
@@ -279,16 +285,6 @@ nav div:hover{
     color: #000000;
     padding: 2vh;
     border-radius: 0px 0px 20px 0px;
-}
-
-.cover{
-    width: 316px;
-    height: 316px;
-    border: 0px;
-    margin: 10px 10px 0px 10px;
-    grid-column: 3;
-    grid-row: 1;
-    
 }
   
 img.show_hover{
@@ -313,7 +309,7 @@ img.show_hover{
 
 ul.anecdotes2{
     list-style: none;
-    grid-column: 1/ span 6;
+    grid-column: 1/ span 7;
         grid-row: 3/4;
 
     display: grid;
@@ -361,7 +357,7 @@ li.img2{
     border-radius: 0px 20px 20px 20px ;
     
 
-    background-image: url(atz-ep.jpg);
+    background-image: url(img/atz-ep.jpg);
     background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -408,27 +404,29 @@ footer{
 
     .best{ 
         display: grid;
-        grid-template-columns: repeat(7, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+        padding: 15px;
+        column-gap: 15px;
     
     }
 
     .cover{
         grid-column: 1/ 5;
         grid-row: 1;
-        border-radius: 15px 0px 0px 20px;
+        border-radius: 20px 0px 0px 20px;
+        margin-right: 5vw;
     }
 
     .song_list{
-        grid-column: 5/ span 7;
+        grid-column: 5/ span 6;
         grid-row: 1;
-        margin-left: 10px;
+        
         display: flex;
         flex-direction: column;
         font-size: 14px;
+        row-gap: 15px;
+        margin-left: 2vw;
 
-        
-        
-        
     }
 
     .song_list .one{
@@ -442,23 +440,25 @@ footer{
     }
 
     .album_data{
-        grid-column: 1/ span 7;
         grid-row: 2;
+        grid-column: 1/ span 7;
         
     }
 
-    .anecdotes {
-        grid-column: 1/ span 8;
+    ul.anecdotes {
+        grid-column: 1/ span 6;
         grid-row: 3;
         
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        width: 100%;
         }
 
     li.treasure{
-        grid-column: 3/ span 5 ;
+        grid-column: 3/ span 4 ;
         grid-row: 1;
         font-size: 13px;
+        width: 90%;
 
     }
 
@@ -473,7 +473,7 @@ footer{
         grid-column:  3;
         grid-row: 2;
         font-size: 13px;
-        ;
+        
         
 
     }
@@ -492,27 +492,26 @@ footer{
 
 
     .song_list2{
-        grid-column: 2/ span 3;
+        grid-column: 5/ span 7;
         grid-row: 1;
 
         display: flex;
         flex-direction: column;
         row-gap: 1vw;
         font-size: 2.3vh;
+        
   
     }
 
     .song_list2 .one{
         border-radius: 0px 20px 0px 0px;
-        padding: 2.8vh 2.8vh 0vh 0vh;
-        margin-top: 1vh;
+        flex-grow: 1;
 
     }
 
     .song_list2 .two{
         border-radius: 0px 0px 20px 0px;
-        margin: 1vh 0.8vh 0vh 0.1vh;
-        padding: 2.8vh 2.8vh 2.8vh 0vh;
+        flex-grow: 1;
 
     }
 
@@ -521,43 +520,34 @@ footer{
     }
 
     ul.anecdotes2{
-        margin: 0;
+        grid-column: 1/ span 8;
+        grid-row: 3;
+        
         display: grid;
-        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
-        grid-template-rows: 1fr 1fr;
-        row-gap: 1vh;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 10px;
+        row-gap: 10px;   
     
+    }
+
+    li.billboard{
+        grid-column: 1/ span 2;
+        grid-row: 1;
+        border-radius: 20px 20px 20px 0px;
+    }
+
+    li.physical{
+
+        grid-column: 3;
+        grid-row: 1;
+        
     }
 
     li.img2{
         grid-column: 2/ span 3;
         grid-row: 2;
         
-    }
-
-    li.billboard{
-        grid-column: 1/ span 2;
-        grid-row: 1;
-    }
-
-    li.ep1{
-        grid-column: 3;
-        grid-row: 1;
-    }
-
-    li.physical{
-
-        grid-column: 4;
-        grid-row: 2;
-    }
-
-    li.ep1{
-        grid-column: 3;
-        grid-row: 1;
-    }
-    .tablet_empty1{
-        grid-column: 4;
-        grid-row: 1;
+        
     }
 
     .tablet_empty2{
@@ -565,6 +555,20 @@ footer{
         grid-row: 2;
     }
 
+
+    li.ep1{
+        grid-column: 4;
+        grid-row: 2;
+        border-radius: 0px 20px 20px 20px;
+    }
+
+
+    .tablet_empty1{
+        grid-column: 4;
+        grid-row: 1;
+    }
+
+   
 
 }
 
