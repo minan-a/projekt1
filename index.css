@@ -6,41 +6,37 @@ body{
     background-size: cover;
 }
 
-
-
+*{
+    margin: 0;
+}
 
 /*main div*/
 .info{
     background: rgba(0,0,0,0.5);
-    grid-column: 1/ span 4;
     border-radius: 20px;
-    margin: 15vh 5vh;
-    padding: 3vh;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 0.1fr 2fr 0.1fr;
-
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    margin: 100px 30px;
 }
-
 
 /* the two divs */
 .best{
     background: rgba(0,0,0,0.5);
     grid-column: 1/ span 4;
     border-radius: 20px;
-    margin: 5vh 0vh;
+    margin-bottom: 2vh;
     border: 1px solid white;
-    padding: 10px;
-
+    padding: 15px;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    
 }
-
 
 .album_data{
     grid-column: 1/ span 4;
     grid-row: 1/ span 2;
+    margin-top: 15px;
 }
 
 /* titles & texts*/
@@ -59,24 +55,27 @@ header{
         font-family: Barlow semi condensed;
         color: white;
         margin-left: 2vw;
-
     }
     p{
         font-family: Barlow semi condensed;
         color: white;
         margin-left: 2vw;
-
+        margin-top: 15px;
     }
-    ul.members{
+    ul.Writers{
         color: white;
+        font-family: Barlow semi condensed;
+        margin-top: 10px;
+    }
+    .anecdotes, .anecdotes2{
         font-family: Barlow semi condensed;
     }
 
     /* buttons*/
 nav{
-    
     display: flex;
     gap: 0.5vw;
+    margin-bottom: 20px;
 }
 
 .button{
@@ -85,16 +84,10 @@ nav{
     padding: 2vw 3vw;
     border-radius: 8px;
     text-align: center;
-    justify-content: center;
     cursor: pointer;
     font-size: 2vw;
     align-self: flex-start;
-
-    /* padding: 20px 25px; */
-}
-
-.bio{
-    padding: 2.5vw 7vw;
+    color: rgba(0,0,0,0.8);
 }
  
 nav div:hover{
@@ -107,120 +100,101 @@ nav div:hover{
     background: rgba(255,255,255,0.6);
     pointer-events: none;
     font-weight: bold;
+    box-shadow: 0px 0px 15px white;
+    color: #000000;
 }
 
 /* image change -hover*/
 .cover{
-   grid-column: 5/7;
-   position: relative;
-   
+    grid-column: 5/ 8;  
+    position: relative;  
 }
- 
- img.show_hover{
-    position: absolute;
-    opacity: 0;  
-    transition: 1s;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
+
+.cover img{
     object-fit: cover;
 }
- 
-.cover:hover img.show_hover{
-    opacity: 1;
-    border-radius: 15px 15px 0px 0px;
+
+.show_hover{
+    border-radius: 20px 20px 0px 0px;
 }
+
 .show_not_hover{
-    border-radius: 15px 15px 0px 0px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    
+    border-radius: 20px 20px 0px 0px;
+    transition: all 0.8s ease;
+}
+
+.show_not_hover:hover{
+    opacity: 1;
+}
+
+.song_list{
+    grid-column: 5/8;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    column-gap: 10px;  
+    font-size: 1.5vw;
+}
+
+.song_list .one{
+    background-color:#0000a2;
+    padding: 20px 0px 40px 0px;
+    border-radius: 0px 0px 0px 20px;
+    flex-grow: 1;
+}
+.song_list .two{
+    background-color:#0000a2;
+    padding: 30px 0px 40px 0px;
+    border-radius: 0px 0px 20px 0px;
+    flex-grow: 1;
 }
 
 
-/* small divs*/
-    .song_list{
-        grid-column: 5/span 7;
-        grid-row: 2;
-        font-size: 14px;
-        
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 18px;
-        width: 95%;
-        margin-bottom: 10px;
-        margin-top: 12px;
-        }
-    
-    .song_list .one{
-        background-color:#0000a2;
-        color: #000000;
-        border-radius: 0px 0px 0px 20px;
-
-    }
-    
-    .song_list .two{
-        background:#0000a2;
-        color: #000000;
-        border-radius: 0px 0px 20px 0px;
-        padding-top: 10px;
-        
-    }
-
-    .song_list h2{
-        color: #000000;
-    }
-
-    
+.song_list h2{
+    color: #000000;
+}
 
     .anecdotes {
-        font-size: 2vh;
-        list-style: none;
-        grid-row: 3;
-        grid-column: 1/ span 7;
-        grid-row: 3/4;
-        gap: 10px;    
-        padding: 0px 10px;
-    
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        column-gap: 10px;
-       
+    list-style: none;
+    grid-column: 1/ span 7;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;  
+    margin: 20px 0 0 0;
+    padding-left: 0;
+    font-size: 1.5vw;
     }
 
     .anecdotes li{
-        
-        height: 25vw;
-
         display: flex;
-        padding: 15px;
-
+        padding: 20px;
+        height: 20vw;
     }
 
-   
     li.mv{
         color: #0000a2; 
         border-radius: 20px 0px 20px 20px;
         background-color: #000000;
         align-items: center;
+        grid-column: 1;
+        grid-row: 1;
     }
 
-    .empty {
-        grid-column: 2/ span 3;
+    .empty1 {
+        grid-column: 2; 
         grid-row: 1;
         opacity: 0;
-        width: 2vw;
     }
-
     
     li.treasure{
         color: #0000a2;
         border-radius: 20px 20px 20px 0px;
         background-color: #000000;
         align-items: center;
-        width: 20vw;
-        
+        grid-column: 3/ 5 ;
+        grid-row: 1; 
     }
     
     li.atzimg{
@@ -229,10 +203,10 @@ nav div:hover{
         background-size: cover;
         border-radius: 0px 20px 20px 20px;
         color: #0000a2;
-
         align-items: end ;
-
-    
+        grid-column: 5;
+        grid-row: 1;
+        font-weight: bold;
     }
     
     li.million{
@@ -240,61 +214,55 @@ nav div:hover{
         border-radius: 20px 20px 0px 20px;
         background-color: #000000;
         align-items: center;
+        grid-column: 6;
+        grid-row: 1;
     }
     
     li.empty{
         grid-column: 2;
         grid-row: 1;
-        height: 25vh;
     }
-    
     
     .songs{
         color: #000000;
     }
     
-
-
     /* next album*/
+    .cover, .song_list2{
+        grid-column: 5/ span 7;
+    }
 
-
-.song_list2{
-    grid-column: 5/span 7;
+    .song_list2{
+        grid-column: 5/8;
         grid-row: 2;
-        font-size: 14px;
-        
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 18px;
-        width: 95%;
-        margin-bottom: 10px;
-        margin-top: 12px;
-
-}
-
-.song_list2 .one{
-    background-color:#f76802;
-    color: #000000;
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        column-gap: 10px; 
+        font-size: 1.5vw; 
+    }
     
-    border-radius: 0px 0px 0px 20px;
-}
+    .song_list2 .one{
+        background-color:#f76802;
+        padding: 20px 0px 40px 0px;
+        border-radius: 0px 0px 0px 20px;
+        flex-grow: 1;
+    }
+    .song_list2 .two{
+        background-color:#f76802;
+        padding: 30px 0px 40px 0px;
+        border-radius: 0px 0px 20px 0px;
+        flex-grow: 1;
+    }
 
-.song_list2 .two{
-    
-    background-color:#f76802;
-    color: #000000;
-    padding: 2vh;
-    border-radius: 0px 0px 20px 0px;
-}
-  
+
 img.show_hover{
     position: absolute;
     opacity: 0;  
     transition: 1s;
     overflow: hidden;
-    width: 316px;
-    height: 316px;
-
+    width: 100%;
+    height: 100%;
 }
  
 .cover:hover img.show_hover{
@@ -303,24 +271,29 @@ img.show_hover{
 }
 .show_not_hover{
     border-radius: 15px 15px 0px 0px;
-    width: 316px;
-    height: 316px;
+    width: 100%;
+    height: 100%;
 }
 
 ul.anecdotes2{
     list-style: none;
     grid-column: 1/ span 7;
-        grid-row: 3/4;
-
+    grid-row: 3/4;
     display: grid;
     grid-template-columns: 1fr 0.5fr 1fr 0.5fr;
-    column-gap: 10px;
-    height: 25vw;
-    
+    gap: 10px;
     margin-left: 0px;
     margin-right: 10px;
-    font-size: 2vh;
-    
+    margin-top: 10px;
+    padding-left: 0;
+    font-size: 1.5vw;
+}
+
+.anecdotes2 li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vw;
 }
 
 li.billboard{
@@ -328,11 +301,6 @@ li.billboard{
     color: #f76802;
     border-radius: 20px 20px 20px 0px;
     padding: 30px 15px 30px 15px;
-
-    display: flex;
-        justify-content: center;
-        align-items: center;
-
 }
 
 li.physical{
@@ -340,36 +308,24 @@ li.physical{
     color: #f76802;
     border-radius: 0px 20px 20px 20px;
     padding: 30px 15px 30px 15px;
-    
     grid-column: 4;
     grid-row: 1;
-
-    display: flex;
-        justify-content: center;
-        align-items: center;
-
-
 }
 
 li.img2{
     background-color: #d1a7a5;
     color: #f76802;
     border-radius: 0px 20px 20px 20px ;
-    
-
     background-image: url(img/atz-ep.jpg);
     background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 3;
+    grid-row: 1;
+    align-items: flex-end;
+    padding: 30px;
+    font-weight: bold;
 
-        grid-column: 3;
-        grid-row: 1;
-
-        display: flex;
-        justify-content:last baseline ;
-        align-items:flex-end ;
-        padding-bottom: 1em;
-    
 }
 
 li.ep1{
@@ -377,26 +333,43 @@ li.ep1{
     color: #f76802;
     border-radius: 20px 20px 0px 20px;
     padding: 30px 15px 30px 15px;
-
     grid-column: 2;
     grid-row: 1;   
-    
-    display: flex;
-        justify-content: center;
-        align-items: center;
 }
-
 
 footer{
     margin-top: 100px;
     margin-bottom: 10px;
     margin-left: 20px;
-    color: white;
-    grid-row: 4;
+    color: rgba(255,255,255,0.6);
 }
 
+                                /* 1111 px */
+@media (min-width: 1111px){
+    header{
+        font-size: 50px;
+    }
+    .album_data h1{
+        font-size: 30px;
+    }
 
-/* 800 px */
+    .album_data h2{
+        font-size: 25px;
+    }
+
+    .album_data p {
+        font-size: 20px;
+    }
+    .album_data ul{
+        font-size: 20px ;
+    }
+
+    .button{
+        padding: 1vw 2vw;
+    }
+}
+
+                                 /* 800 px */
 @media (max-width: 800px) {
     header{
         text-align: center;
@@ -407,14 +380,16 @@ footer{
         grid-template-columns: repeat(6, 1fr);
         padding: 15px;
         column-gap: 15px;
-    
     }
 
     .cover{
         grid-column: 1/ 5;
         grid-row: 1;
         border-radius: 20px 0px 0px 20px;
-        margin-right: 5vw;
+    }
+
+    .show_not_hover:hover {
+        display: none;
     }
 
     .song_list{
@@ -423,9 +398,8 @@ footer{
         
         display: flex;
         flex-direction: column;
-        font-size: 14px;
-        row-gap: 15px;
-        margin-left: 2vw;
+        font-size: 13px;
+        row-gap: 10px;
 
     }
 
@@ -442,92 +416,84 @@ footer{
     .album_data{
         grid-row: 2;
         grid-column: 1/ span 7;
-        
+    }
+
+    .album_data p{
+        margin-top: 10px;
     }
 
     ul.anecdotes {
-        grid-column: 1/ span 6;
+        grid-column: 1/ span 7;
         grid-row: 3;
-        
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        column-gap: 10px;
+        row-gap: 10px;   
         width: 100%;
-        }
+        padding-left: 0;
+        padding-right: 0;
+    }
 
     li.treasure{
         grid-column: 3/ span 4 ;
         grid-row: 1;
-        font-size: 13px;
-        width: 90%;
+        font-size: 13;
+        width: 95%;
 
     }
 
     li.atzimg{
         grid-column: 2;
         grid-row: 2;
-        font-size: 13px;
-
     }
 
     li.million{
         grid-column:  3;
         grid-row: 2;
-        font-size: 13px;
-        
-        
-
     }
 
     li.mv{
-        
-        padding: 20px;
-        font-size: 13px;
-    
+        grid-column: 1;
+        grid-row: 1;
     }
 
     .empty {
         grid-column: 3/ span 4;
-        
     }
-
 
     .song_list2{
         grid-column: 5/ span 7;
         grid-row: 1;
-
         display: flex;
         flex-direction: column;
         row-gap: 1vw;
-        font-size: 2.3vh;
-        
-  
+        font-size: 13px;
     }
 
     .song_list2 .one{
         border-radius: 0px 20px 0px 0px;
         flex-grow: 1;
-
     }
 
     .song_list2 .two{
         border-radius: 0px 0px 20px 0px;
         flex-grow: 1;
-
     }
 
     .album_data{
-        grid-column: 1/ span 3;
+        grid-column: 1/ span 7;
     }
 
     ul.anecdotes2{
-        grid-column: 1/ span 8;
+        grid-column: 1/ span 7;
         grid-row: 3;
-        
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         column-gap: 10px;
         row-gap: 10px;   
-    
+        width: 100%;
+        font-size: 2vw;
+        padding-left: 0;
     }
 
     li.billboard{
@@ -537,17 +503,14 @@ footer{
     }
 
     li.physical{
-
         grid-column: 3;
         grid-row: 1;
-        
     }
 
     li.img2{
-        grid-column: 2/ span 3;
+        grid-column: 2/ 4;
         grid-row: 2;
-        
-        
+        margin-right: 10px;
     }
 
     .tablet_empty2{
@@ -555,99 +518,122 @@ footer{
         grid-row: 2;
     }
 
-
     li.ep1{
         grid-column: 4;
         grid-row: 2;
         border-radius: 0px 20px 20px 20px;
     }
 
-
     .tablet_empty1{
         grid-column: 4;
         grid-row: 1;
     }
 
-   
-
+    footer{
+        font-size: 15px;
+    }
 }
 
-/* 500px */
-
-@media (max-width: 500px){
-    .info{
-        margin: 0;
+@media (max-width: 755px){
+    .best{
+        margin-top: 1vh;
     }
     .button{
-        font-size: 15px;
+        font-size: 1.5vw;
+    }
+     header{
+        font-size: 5vw;
+     }
+      .info{
+        padding: 10px;
+      }
+      footer{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 620px){
+    footer{
+        font-size: 10px;
+    }
+}
+
+                                       /* 500px */
+
+@media (max-width: 500px){
+   header{
+    font-size: 35px;
+   }
+
+    .info{
+        margin: 0;
         padding: 20px;
     }
+    .button{
+        font-size: 14px;
+        padding: 10px;
+    }
     .best{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+        margin-top: 0;
+        grid-template-columns: 1fr;
+    }
 
-        /*
-        display: grid;
-        grid-template-rows: 0.5fr 0.5fr 0.2fr 0.2fr ;
-        */
-    }
     .cover{
-        order: 1;
+        grid-row: 1;
+        grid-column: 1/span 10;
     }
+
     .song_list{
-        order: 2;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-row: 2;
+        grid-column: 1/span 10;
+
+        display: flex;
+        flex-direction: row;
     }
 
     .song_list .one{
         border-radius: 0px 0px 0px 20px;
+        flex-basis: 100px;
     }
     .song_list.two{
         border-radius: 0px 20px 0px 20px;
+        flex-basis: 150px;
+
     }
     .album_data{
-        order: 3;
+        grid-row: 3;
+        grid-column: 1/span 10;
     }
 
     ul.anecdotes{
-        order: 4;
-
+        grid-row: 4;
+        grid-column: 1/span 10;
         display: grid;
-        grid-template-columns: 0.2fr 0.2fr 0.2fr;
-        grid-template-rows: 1fr 1fr;
-
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 8px;
+        padding-left: 0;
+        font-size: 2.7vw;
     }
 
-    
     li.treasure{
         grid-column: 2/span 3 ;
         grid-row: 1;
-        font-size: 2vh;
-
+        padding-right: 0;
     }
 
     li.atzimg{
         grid-column: 2;
         grid-row: 2;
-        font-size: 2vh;
-
     }
 
     li.million{
         grid-column: 3;
         grid-row: 2;
-        font-size: 2vh;
-
     }
 
     li.mv{
         grid-column: 1;
         grid-row: 1;
-    
-        font-size: 2vh;
-    
     }
 
     li.empty1{
@@ -661,20 +647,49 @@ footer{
     }
 
     .song_list2{
-        order: 2;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-row: 2;
+        grid-column: 1/span 10;
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
     }
 
     .song_list2 .one{
         border-radius: 0px 0px 0px 20px;
+        flex-basis: 100px;
     }
-     .song_list2 .two{
-        border-radius: 0px 0px 20px 0px;
+    .song_list2.two{
+        border-radius: 0px 20px 0px 20px;
+        flex-basis: 200px;
     }
 
     ul.anecdotes2{
-        order: 4;
+      grid-template-columns: repeat(3, 1fr);
+      grid-row: 4;
+      grid-column: 1/ span 10;
+      gap: 8px;
+      padding-left: 0;
+      font-size: 2.7vw;
+    }
+
+    li.billboard{
+        grid-row: 1;
+        grid-column: 1/ span 2;
+    }
+
+    li.physical{
+        grid-row: 1;
+        grid-column: 3;
+    }
+    
+    li.img2{
+        grid-row: 2;
+        grid-column: 1/ span 2;
+    }
+
+    li.ep1{
+        grid-row: 2;
+        grid-column: 3;
     }
 
 }
